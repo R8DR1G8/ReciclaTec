@@ -5,21 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GreenSoft — Educación y Acción Ambiental</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Modal de registro -->
   <div id="modalRegistro" class="modal">
     <div class="modal-card">
-      <h2>Bienvenido a <span class="brand">GreenSoft</span></h2>
+      <h2>Bienvenido a GreenSoft</h2>
       <p>Antes de continuar, ingresa tus datos para participar.</p>
       <form id="formRegistro">
-        <div class="field"><label for="nombres">Nombres</label><input id="nombres" type="text" required></div>
-        <div class="field"><label for="apellidos">Apellidos</label><input id="apellidos" type="text" required></div>
-        <div class="row">
-          <div class="field"><label for="grado">Grado</label><input id="grado" type="text" required></div>
-          <div class="field"><label for="aula">Aula</label><input id="aula" type="text" required></div>
-        </div>
+        <input id="nombres" type="text" placeholder="Nombres" required />
+        <input id="apellidos" type="text" placeholder="Apellidos" required />
+        <input id="grado" type="text" placeholder="Grado (Ej: 3° Primaria)" required />
+        <input id="aula" type="text" placeholder="Aula (Ej: A / B)" required />
         <button type="submit" class="btn primary">Comenzar</button>
       </form>
     </div>
@@ -27,107 +25,93 @@
 
   <!-- Encabezado -->
   <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="logo-text">GreenSoft</h1>
-      <nav>
-        <ul class="nav">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#por-que">¿Por qué reciclar?</a></li>
-          <li><a href="#tipos">Tipos</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#ecoretos">EcoRetos</a></li>
-          <li><a href="#noticias">Noticias</a></li>
-        </ul>
-      </nav>
-      <div id="userSummary"></div>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/728/728093.png" alt="logo hoja verde" />
+      <h1>GreenSoft</h1>
     </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#por-que">¿Por qué reciclar?</a></li>
+        <li><a href="#tipos">Tipos de residuos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#ecoretos">EcoRetos</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+      </ul>
+    </nav>
+    <div class="user-summary" id="userSummary"></div>
   </header>
 
-  <!-- Hero con olas -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
+  <!-- Contenido principal -->
+  <main>
+    <!-- Inicio -->
+    <section id="inicio" class="hero">
       <div class="hero-text">
-        <h2>Pequeñas acciones,<br><span class="highlight">grandes cambios</span></h2>
-        <p>GreenSoft promueve la educación ambiental con tecnología y conciencia ecológica. ¡Súmate al cambio!</p>
-        <div class="buttons">
-          <a href="#por-que" class="btn primary">Aprende</a>
-          <a href="#tipos" class="btn">Participa</a>
+        <h2>Pequeñas acciones, grandes cambios</h2>
+        <p>GreenSoft es la web del colegio para aprender, participar y compartir acciones ecológicas. ¡Suma tu esfuerzo y ayuda a mejorar nuestro entorno!</p>
+        <div class="quick-buttons">
+          <a class="btn" href="#por-que">Aprende</a>
+          <a class="btn" href="#tipos">Participa</a>
+          <a class="btn" href="#noticias">Noticias verdes</a>
         </div>
       </div>
       <div class="hero-media">
-        <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=800&q=60" alt="reciclaje escolar">
+        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=60" alt="Estudiantes reciclando" />
       </div>
-    </div>
-    <!-- Efecto de olas SVG -->
-    <div class="wave-container">
-      <svg viewBox="0 0 120 28" preserveAspectRatio="none">
-        <path d="M0,10 C30,20 90,0 120,10 V30 H0 Z"></path>
-      </svg>
-    </div>
-  </section>
+    </section>
 
-  <!-- ¿Por qué reciclar? -->
-  <section id="por-que" class="section">
-    <h3>¿Por qué reciclar?</h3>
-    <p>Reciclar cuida el planeta, enseña responsabilidad y fomenta el trabajo en equipo.</p>
-    <div class="info-cards">
-      <div class="card"><h4>🌍 En el planeta</h4><p>Reduce contaminación y uso de recursos.</p></div>
-      <div class="card"><h4>🏫 En el colegio</h4><p>Inspira a los estudiantes a crear proyectos verdes.</p></div>
-      <div class="card"><h4>🏠 En casa</h4><p>Fomenta hábitos sostenibles.</p></div>
-    </div>
-  </section>
+    <!-- Por qué reciclar -->
+    <section id="por-que" class="section wave">
+      <h3>¿Por qué reciclar?</h3>
+      <p>Reciclar ayuda a reducir la contaminación, cuidar los recursos naturales y mejorar la salud de nuestra comunidad. ¡Comienza hoy mismo!</p>
+    </section>
 
-  <!-- Tipos de residuos -->
-  <section id="tipos" class="section wave-light">
-    <h3>Tipos de residuos</h3>
-    <div class="residuos-grid">
-      <div class="residuo green"><h4>Orgánicos</h4><p>Restos de comida, hojas, frutas.</p></div>
-      <div class="residuo blue"><h4>Papel y cartón</h4><p>Hojas, cuadernos, cajas.</p></div>
-      <div class="residuo yellow"><h4>Plásticos y metales</h4><p>Botellas, latas, envases.</p></div>
-      <div class="residuo red"><h4>Peligrosos</h4><p>Pilas, aerosoles, electrónicos.</p></div>
-    </div>
-  </section>
+    <!-- Tipos -->
+    <section id="tipos" class="section">
+      <h3>Tipos de residuos</h3>
+      <div class="grid-4">
+        <div class="card">♻️ <h4>Orgánicos</h4><p>Restos de comida, hojas, frutas.</p></div>
+        <div class="card">📄 <h4>Papel</h4><p>Hojas usadas, cajas limpias.</p></div>
+        <div class="card">🔄 <h4>Plástico</h4><p>Botellas PET, envases limpios.</p></div>
+        <div class="card">⚠️ <h4>Peligrosos</h4><p>Pilas, aerosoles, electrónicos.</p></div>
+      </div>
+    </section>
 
-  <!-- Proyectos -->
-  <section id="proyectos" class="section wave">
-    <h3>Proyectos escolares</h3>
-    <p>Comparte tus ideas ecológicas con toda la comunidad.</p>
-    <form id="formProyecto" class="form-proyecto">
-      <input id="tituloProyecto" placeholder="Título del proyecto" required>
-      <textarea id="descProyecto" placeholder="Descripción del proyecto" required></textarea>
-      <button type="submit" class="btn primary">Publicar</button>
-    </form>
-    <div id="listaProyectos"></div>
-  </section>
+    <!-- Proyectos -->
+    <section id="proyectos" class="section wave">
+      <h3>Proyectos escolares</h3>
+      <p>Comparte tus ideas ecológicas con toda la comunidad.</p>
+      <form id="formProyecto">
+        <input id="tituloProyecto" placeholder="Título del proyecto" required />
+        <textarea id="descProyecto" placeholder="Descripción del proyecto" required></textarea>
+        <button type="submit" class="btn primary">Publicar</button>
+      </form>
+      <div id="listaProyectos"></div>
+    </section>
 
-  <!-- EcoRetos -->
-  <section id="ecoretos" class="section">
-    <h3>EcoRetos</h3>
-    <p>Reto del mes: <strong>Trae una botella plástica para reciclar</strong></p>
-    <form id="formAporte">
-      <input id="cantBotellas" type="number" min="1" placeholder="Cantidad de botellas" required>
-      <button type="submit" class="btn">Registrar</button>
-    </form>
-    <p id="totalBotellas">Total registrado: 0</p>
-  </section>
+    <!-- EcoRetos -->
+    <section id="ecoretos" class="section">
+      <h3>EcoRetos</h3>
+      <p>Reto del mes: <strong>Trae una botella para reciclar</strong></p>
+      <form id="formAporte">
+        <input id="cantBotellas" type="number" min="0" placeholder="Cantidad de botellas" required />
+        <button type="submit" class="btn">Registrar</button>
+      </form>
+      <p id="totalBotellas">Total registrado: 0</p>
+    </section>
 
-  <!-- Noticias -->
-  <section id="noticias" class="section wave-light">
-    <h3>Noticias verdes</h3>
-    <ul class="news">
-      <li><strong>05 Jun:</strong> Feria ambiental escolar</li>
-      <li><strong>17 May:</strong> Recolección de pilas usadas</li>
-    </ul>
-  </section>
+    <!-- Noticias -->
+    <section id="noticias" class="section wave">
+      <h3>Noticias verdes</h3>
+      <ul class="news-list">
+        <li><strong>05 Jun:</strong> Día Mundial del Medio Ambiente.</li>
+        <li><strong>22 Abr:</strong> Día de la Tierra.</li>
+      </ul>
+    </section>
+  </main>
 
-  <!-- Pie con olas -->
-  <footer class="site-footer">
-    <div class="wave-container footer-wave">
-      <svg viewBox="0 0 120 28" preserveAspectRatio="none">
-        <path d="M0,20 C30,10 90,30 120,20 V30 H0 Z"></path>
-      </svg>
-    </div>
-    <p>GreenSoft © <span id="year"></span> — Tecnología y conciencia ambiental</p>
+  <footer>
+    <p>© <span id="year"></span> GreenSoft — Proyecto escolar sostenible 🌱</p>
   </footer>
 
   <script src="script.js"></script>
